@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Weather App</string>
+    <string name="clear_sky_weather">Clear sky</string>
+    <string name="mainly_clear_weather">Mainly clear</string>
+    <string name="partly_cloudy_weather">Partly cloudy</string>
+    <string name="overcast_weather">Overcast</string>
+    <string name="foggy_weather">Foggy</string>
+    <string name="depositing_rime_fog_weather">Depositing rime fog</string>
+    <string name="light_drizzle_weather">Light drizzle</string>
+    <string name="moderate_drizzle_weather">Moderate drizzle</string>
+    <string name="dense_drizzle_weather">Dense drizzle</string>
+    <string name="slight_freezing_drizzle_weather">Slight freezing drizzle</string>
+    <string name="dense_freezing_drizzle_weather">Dense freezing drizzle</string>
+    <string name="slight_rain_weather">Slight rain</string>
+    <string name="rainy_weather">Rainy</string>
+    <string name="heavy_rain_weather">Heavy rain</string>
+    <string name="heavy_freezing_rain_weather">Heavy freezing rain</string>
+    <string name="slight_snow_fall">Slight snow fall</string>
+    <string name="moderate_snow_fall_weather">Moderate snow fall</string>
+    <string name="heavy_snow_fall_weather">Heavy snow fall</string>
+    <string name="snow_grains_weather">Snow grains</string>
+    <string name="slight_rain_showers_weather">Slight rain showers</string>
+    <string name="moderate_rain_showers_weather">Moderate rain showers</string>
+    <string name="violent_rain_showers_weather">Violent rain showers</string>
+    <string name="light_snow_showers_weather">Light snow showers</string>
+    <string name="heavy_snow_showers_weather">Heavy snow showers</string>
+    <string name="moderate_thunderstorm_weather">Moderate thunderstorm</string>
+    <string name="thunderstorm_with_slight_hail_weather">Thunderstorm with slight hail</string>
+    <string name="thunderstorm_with_heavy_hail_weather">Thunderstorm with heavy hail</string>
 </resources>

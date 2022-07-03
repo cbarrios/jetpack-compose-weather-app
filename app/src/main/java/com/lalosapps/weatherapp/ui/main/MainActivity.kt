@@ -1,4 +1,4 @@
-package com.lalosapps.weatherapp
+package com.lalosapps.weatherapp.ui.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
