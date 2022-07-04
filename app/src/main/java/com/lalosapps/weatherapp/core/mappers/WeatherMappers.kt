@@ -54,7 +54,7 @@ fun WeatherDto.toWeatherInfo(): WeatherInfo {
         }
         it.time.hour == hour
     }
-    if(currentWeatherData == null) {
+    if (currentWeatherData == null) {
         currentWeatherData = weatherDataMap[1]?.find { it.time.hour == 0 }
     }
     return WeatherInfo(
