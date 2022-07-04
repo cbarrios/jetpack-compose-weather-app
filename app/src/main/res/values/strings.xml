@@ -28,4 +28,5 @@
     <string name="thunderstorm_with_slight_hail_weather">Thunderstorm with slight hail</string>
     <string name="thunderstorm_with_heavy_hail_weather">Thunderstorm with heavy hail</string>
     <string name="today_time">Today %s</string>
+    <string name="today">Today</string>
 </resources>

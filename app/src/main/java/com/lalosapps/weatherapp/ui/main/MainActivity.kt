@@ -7,11 +7,17 @@ import androidx.activity.compose.setContent
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import com.lalosapps.weatherapp.ui.theme.CulturedGray
 import com.lalosapps.weatherapp.ui.theme.WeatherAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,16 +42,36 @@ class MainActivity : ComponentActivity() {
             )
         )
         setContent {
+
             WeatherAppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Column(modifier = Modifier.fillMaxSize()) {
-                        WeatherCard(
-                            state = viewModel.state,
-                            backgroundColor = MaterialTheme.colors.background
-                        )
+                    Box(
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        Column(modifier = Modifier.fillMaxSize()) {
+                            WeatherCard(
+                                state = viewModel.state,
+                                backgroundColor = if (isSystemInDarkTheme()) MaterialTheme.colors.background else CulturedGray
+                            )
+                            Spacer(modifier = Modifier.height(16.dp))
+                            WeatherForecast(state = viewModel.state)
+                        }
+                        if (viewModel.state.isLoading) {
+                            CircularProgressIndicator(
+                                modifier = Modifier.align(Alignment.Center)
+                            )
+                        }
+                        viewModel.state.error?.let { error ->
+                            Text(
+                                text = error,
+                                color = MaterialTheme.colors.error,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.align(Alignment.Center)
+                            )
+                        }
                     }
                 }
             }
